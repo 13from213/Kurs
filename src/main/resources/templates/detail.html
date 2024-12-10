@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" th:href="@{mm.css}">
+</head>
+
+<body>
+<main class="main">
+    <div id="main-block" class="main-block">
+        <div class="recent">
+            <form action="/units" method="get" class="recent-form">
+                <button class="recent-btn"><a>Retern to units</a></button>
+            </form>
+        </div>
+        <div class="title">
+            <a>ОБЛІК ВІДВІДУВАНЬ ЗАНЯТЬ В <a th:text="${unitName}"></a> ГРУПІ</a>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                <tr>
+                    <th>rank</th>
+                    <th>name</th>
+                    <th>lastName</th>
+                    <th>total_lessons</th>
+                    <th>total_attended</th>
+                    <th>total_missed</th>
+                    <th>total_late</th>
+                    <th>Видалити</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="soldier : ${soldiers}">
+                    <td th:text="${soldier.getMil_rank()}"></td>
+                    <td th:text="${soldier.getName()}"></td>
+                    <td th:text="${soldier.getLastName()}"></td>
+                    <td th:text="${soldier.getTotal_lessons()}"></td>
+                    <td th:text="${soldier.getTotal_attended()}"></td>
+                    <td th:text="${soldier.getTotal_missed()}"></td>
+                    <td th:text="${soldier.getTotal_late()}"></td>
+
+                    <td><form action="/delete" method="post">
+                        <input name="personId" type="hidden" th:value="${soldier.getId()}">
+                        <button class="delete-btn" style="background-color: red; color: white;">
+                            ВИДАЛИТИ
+                        </button>
+                    </form>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="new-block">
+            <button id="new-btn" class="new-btn">Create new document</button>
+        </div>
+    </div>
+    <div id="create-block" class="create-block">
+        <form action="/create" method="post" class="forma">
+            <div class="create-title">
+                <div class="title-text">
+                    <a>Add new document</a>
+                </div>
+                <div id="icon" class="icon">
+                    <a>X</a>
+                </div>
+            </div>
+            <div class="field">
+                <a>Rank</a>
+                <input class="field-input" type="text" name="mil_rank">
+            </div>
+            <div class="field">
+                <a>Name</a>
+                <input class="field-input" type="text" name="name">
+            </div>
+            <div class="field">
+                <a>lastName</a>
+                <input class="field-input" type="text" name="lastName">
+            </div>
+            <div class="field">
+                <a>total_lessons</a>
+                <input class="field-input" type="text" name="total_lessons">
+            </div>
+            <div class="field">
+                <a>total_attended</a>
+                <input class="field-input" type="text" name="total_attended">
+            </div>
+            <div class="field">
+                <a>total_missed</a>
+                <input class="field-input" type="text" name="total_missed">
+            </div>
+            <div class="field">
+                <a>total_late</a>
+                <input class="field-input" type="text" name="total_late">
+                <input type="hidden" name="unitId" th:value="${unitId}">
+            </div>
+            <div class="field">
+                <button class="field-btn"><a>Create</a></button>
+            </div>
+        </form>
+
+
+    </div>
+</main>
+<script th:src="@{/create.js}"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+</style>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+
+<body>
+<main class="main">
+    <div id="reg-container" class="reg-container">
+        <form class="reg-form" action="/registration" method="post">
+            <div class="field rgt">
+                <a class="reg-text">REGISTRATION</a>
+            </div>
+            <div class="field">
+                <input class="reg-input" type="text" th:name="login" placeholder="Login">
+            </div>
+            <div class="field">
+                <input class="reg-input" type="password" th:name="password" placeholder="Password">
+            </div>
+            <div class="field">
+                <button class="reg-button"><a>Confirm</a></button>
+            </div>
+            <div class="field already">
+                <a id="ref1">Already have account</a>
+            </div>
+        </form>
+    </div>
+    <div id="login-container" class="reg-container">
+        <form class="reg-form" action="/login" method="post">
+            <div class="field rgt">
+                <a class="reg-text">LOGIN</a>
+            </div>
+            <div class="field">
+                <input class="reg-input" type="text" th:name="login" placeholder="Login">
+            </div>
+            <div class="field">
+                <input class="reg-input" type="password" th:name="password" placeholder="Password">
+            </div>
+            <div class="field">
+                <button class="reg-button"><a>Login</a></button>
+            </div>
+            <div class="field already">
+                <a id="ref2">Not registered yet?</a>
+            </div>
+        </form>
+    </div>
+</main>
+<script th:src="@{/index.js}"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+</style>
+</body>
+
+</html>

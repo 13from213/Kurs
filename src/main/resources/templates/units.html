@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+
+<body>
+<main class="main-units">
+    <div class="main-block">
+        <div class="block-title gg">
+            <form class="block-form" action="/">
+                <button class="confirm"><a>Return to login</a></button>
+            </form>
+        </div>
+        <div class="block-title">
+            <div class="mini">
+                <a>Список груп</a>
+            </div>
+        </div>
+        <div class="block-title flex">
+            <div class="unit-block" th:each="unit :${units}">
+                <form class="just-form" action="/detail" method="get">
+                    <input type="hidden" th:value="${unit.getId()}" name="unitId">
+                    <button class="unit-btn"><a th:text="${unit.getName()}"></a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+</style>
+</body>
+
+</html>

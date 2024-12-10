@@ -1,0 +1,140 @@
+html{
+    font-family: "Rubik", sans-serif;
+}
+.reg-container{
+    width: 100%;
+    height: 260px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 12%;
+    background-color: white;
+}
+#login-container{
+    display: none;
+}
+.main{
+    margin: auto;
+    width: 25%;
+    height: 100%;
+    margin-top: 10%;
+}
+.main-units{
+    /* margin: auto; */
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+body{
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: azure;
+    background-size: cover;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.field{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.reg-text{
+    font-size: 26px;
+}
+.rgt{
+    margin-top: 30px;
+}
+.reg-input{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+.reg-button{
+    width: 81%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    border: 2px solid green;
+    cursor: pointer;
+}
+.already{
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.main-block{
+    width: 40%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+}
+.block-title{
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+}
+.block-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.confirm{
+    width: 90%;
+    height: 55%;
+    border-radius: 10px;
+    border: 2px solid green;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+.gg{
+    margin-top: 5%;
+}
+.mini{
+    width: 90%;
+    height: 100%;
+    font-size: 30px;
+    border-bottom: 3px solid rgb(25, 94, 25);
+    margin: auto;
+    text-align: center;
+}
+.unit-block{
+    width: 15%;
+    height: 50%;
+
+}
+.just-form{
+    width: 100%;
+    height: 100%;
+}
+.unit-btn{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-bottom: 3px solid rgb(25, 94, 25);
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 5%;
+}
